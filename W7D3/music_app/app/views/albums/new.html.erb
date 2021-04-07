@@ -1,0 +1,14 @@
+<h2>Create a new album</h2>
+
+<form action="<% albums_url %>" method="POST">
+    <%= auth_token %>
+    <input type="hidden" name="_method" value="PATCH">
+
+    <label>Name
+        <input type="text" name="album[title]" value="<%=@album.title%>">
+    </label>
+
+    <br>
+
+    <input type="submit" value="Submit">
+</form>

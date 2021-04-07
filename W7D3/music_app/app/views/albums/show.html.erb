@@ -1,0 +1,11 @@
+<h2><%= @album.title %></h2>
+
+<a href="<%= album_url(@album) %>"> Album</a>
+
+<form action="<%= album_url(@album) %>" method="POST">
+    <%= auth_token %>
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Album">
+</form>
+
+<a href="<%= albums_url %>">All albums</a>
